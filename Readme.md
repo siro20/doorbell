@@ -62,3 +62,14 @@ Modify `/etc/pulse/client.conf` and set:
 default-server = /var/run/pulse/native
 autospawn = no
 ```
+
+## Testing audio
+
+In order to test if audio works without toggling the GPIO you can add an additional
+argument:
+
+```
+./doorbell <mp3 sound file> <volume> -t
+```
+
+This will play the sound file at given volume and then exit.
