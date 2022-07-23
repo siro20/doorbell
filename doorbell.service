@@ -1,0 +1,12 @@
+[Unit]
+Description=Doorbell service.
+After=sound.target
+
+[Service]
+User=pi
+Type=simple
+Group=audio
+ExecStart=/usr/local/bin/doorbell /usr/share/doorbell/doorbell.mp3 -4
+
+[Install]
+WantedBy=default.target
